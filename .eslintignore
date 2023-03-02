@@ -6,3 +6,4 @@ node_modules/
 tsconfig.json
 .eslintrc.json
 cypress.json
+_meta.json
