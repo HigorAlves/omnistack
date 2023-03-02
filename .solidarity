@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/solidaritySchema",
+  "config" : {
+    "output" : "moderate"
+  },
+  "requirements": {
+    "Yarn": [{"rule": "cli", "binary": "yarn"}],
+    "Node": [{ "rule": "cli", "binary": "node", "semver": "18.14.2"}],
+    "Git email": [{"rule": "shell", "command": "git config core.ignorecase", "match": "true"}]
+  },
+}

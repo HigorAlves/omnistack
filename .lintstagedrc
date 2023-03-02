@@ -1,7 +1,7 @@
 {
-	"*.{tsx,ts,json,js}": [
-		"prettier --write .",
-		"pretty-quick --staged",
-		"eslint"
-	]
+  "*.{tsx,ts,json,js}": [
+    "prettier --write .",
+    "pretty-quick --staged",
+    "eslint"
+  ]
 }
