@@ -56,7 +56,6 @@ Open `packages/ui/package.json`. You'll notice these two attributes:
 When workspaces import from ui, main tells them where to access the code they're importing. Type tells them where the
 TypeScript types are located.
 
-
 ## Understanding `tsconfig`
 
 We have two more workspaces to look at, `tsconfig` and `eslint-config-custom`. Each of these allow for shared
@@ -94,16 +93,16 @@ it'll look in the directory above until it finds one.
 So that means that if we're working on code inside `packages/ui` (which doesn't have a `.eslintrc.js`) it'll refer to the root instead.
 
 Apps that do have an `.eslintrc.js` can refer to custom in the same way. For instance, in docs:
+
 ```javascript
 module.exports = {
-	root: true,
-	extends: ["custom"],
+  root: true,
+  extends: ["custom"],
 };
 ```
 
 Just like `tsconfig`, `eslint-config-custom` lets us share ESLint configs across our entire monorepo, keeping things
 consistent no matter what project you're working on.
-
 
 ## Understanding `apps`
 
@@ -117,7 +116,7 @@ mainly to develop the core features that every `stack` will use.
 A library is a way of packaging a general purpose set of features that can be used within other projects. A library cannot run on its own.
 It's a bunch of low level tools that we can use to help our other `workspaces`.
 
-** A `lib` cant depend on any other `workspace`
+\*\* A `lib` cant depend on any other `workspace`
 
 > You can think on a lib as a `util` folder where we have code to help us.
 
@@ -138,13 +137,11 @@ Low level tools used to handle CI/CD process or helping developers.
 Services a used mainly for data ingestion, transformation and consume outside services, so we can use it and
 handle there results turning it easy to use in our `apps` or `stacks`, less dependent from another `workspaces` better.
 
-
 ## Understanding `stacks`
 
 Here were we define our specific platform configurations for each client, we use this to build their personalized platform.
 
 **NEEDS A BETTER DESCRIPTION AS SOON AS I GOT IT**
-
 
 ## Understanding `turbo.json`
 
@@ -158,13 +155,13 @@ Let's take a look inside turbo.json, at the root:
 {
   "pipeline": {
     "build": {
-//   ^^^^^
+      //   ^^^^^
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
     "lint": {},
     "dev": {
-//   ^^^
+      //   ^^^
       "cache": false
     }
   }
