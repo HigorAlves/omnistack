@@ -2,6 +2,9 @@
   "index": "Home",
   "gettingStarted": "Getting Started",
   "folderStructure": "Folder Structure",
+  "localDevelopment": "Local Development",
+  "buildAndDeploy": "Build & Deploy",
+  "version": "Version Bumps",
   "gitflow": "Git flow",
   "faq": "FAQ"
 }
