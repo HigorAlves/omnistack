@@ -7,9 +7,11 @@ complete. These long-lived feature branches require more collaboration to merge 
 the trunk branch. They can also introduce conflicting updates.
 
 ## How it works
+
 ![](https://wac-cdn.atlassian.com/dam/jcr:a13c18d6-94f3-4fc4-84fb-2b8f1b2fd339/01%20How%20it%20works.svg?cdnVersion=824)
 
 ### Develop and main branches
+
 Instead of a single main branch, this workflow uses two branches to record the history of the project.
 The main branch stores the official release history, and the develop branch serves as an integration branch for features.
 It's also convenient to tag all commits in the main branch with a version number.
@@ -26,6 +28,7 @@ This branch will contain the complete history of the project, whereas main will 
 Other developers should now clone the central repository and create a tracking branch for develop.
 
 ### Feature branches
+
 Each new feature should reside in its own branch, which can be pushed to the central repository for backup/collaboration.
 But, instead of branching off of main, feature branches use develop as their parent branch. When a feature is complete,
 it gets merged back into develop. Features should never interact directly with main.
@@ -38,15 +41,18 @@ But, the Gitflow workflow doesn’t stop there.
 Feature branches are generally created off to the latest develop branch.
 
 #### Creating a feature branch
+
 ```bash
 git checkout develop
 git checkout -b feature_branch
 ```
 
 #### Finishing a feature branch
+
 When you’re done with the development work on the feature, the next step is to open a pull request to merge the feature_branch into develop.
 
 ### Release branches
+
 ![](https://wac-cdn.atlassian.com/dam/jcr:8f00f1a4-ef2d-498a-a2c6-8020bb97902f/03%20Release%20branches.svg?cdnVersion=824)
 
 Once develop has acquired enough features for a release (or a predetermined release date is approaching), you fork a
@@ -74,6 +80,7 @@ need to be accessible to new features. If your organization stresses code review
 To finish a release branch, you will need to open a pull request to main from the release branch.
 
 ### Hotfix branches
+
 ![](https://wac-cdn.atlassian.com/dam/jcr:cc0b526e-adb7-4d45-874e-9bcea9898b4a/04%20Hotfix%20branches.svg?cdnVersion=824)
 
 Maintenance or “hotfix” branches are used to quickly patch production releases. Hotfix branches are a lot like release branches and feature branches except they're based on main instead of develop. This is the only branch that should fork directly off of main. As soon as the fix is complete, it should be merged into both main and develop (or the current release branch), and main should be tagged with an updated version number.
@@ -86,7 +93,6 @@ git checkout -b hotfix_branch
 ```
 
 Similar to finishing a release branch, a hotfix branch gets merged into both main and develop.
-
 
 ## The overall flow of Gitflow is
 
