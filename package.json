@@ -9,8 +9,8 @@
     "stacks/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "bash ./scripts/build.sh",
+    "dev": "bash ./scripts/dev.sh",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "validate": "turbo run lint && yarn format",
