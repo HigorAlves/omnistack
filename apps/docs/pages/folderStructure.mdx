@@ -27,7 +27,7 @@ This pattern of sharing code across applications is extremely common in monorepo
 Take a look inside `./apps/docs/pages/index.tsx`. Both docs and web are Next.js applications, and they both use the ui library in a similar way:
 
 ```javascript
-import { Button } from "ui";
+import { Button } from 'ui'
 //       ^^^^^^         ^^
 
 export default function Docs() {
@@ -36,7 +36,7 @@ export default function Docs() {
       <h1>Docs</h1>
       <Button />
     </div>
-  );
+  )
 }
 ```
 
@@ -76,8 +76,8 @@ Let's take a look inside `.eslintrc.js` in the root of themonorepo to figure out
 ```javascript
 module.exports = {
   // This tells ESLint to load the config from the workspace `eslint-config-custom`
-  extends: ["custom"],
-};
+  extends: ['custom'],
+}
 ```
 
 ESLint resolves configuration files by looking for workspaces with the name `eslint-config-*`. This lets us write
@@ -95,8 +95,8 @@ Apps that do have an `.eslintrc.js` can refer to custom in the same way. For ins
 ```javascript
 module.exports = {
   root: true,
-  extends: ["custom"],
-};
+  extends: ['custom'],
+}
 ```
 
 Just like `tsconfig`, `eslint-config-custom` lets us share ESLint configs across our entire monorepo, keeping things

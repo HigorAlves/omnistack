@@ -5,7 +5,7 @@
   },
   "requirements": {
     "Yarn": [{"rule": "cli", "binary": "yarn"}],
-    "Node": [{ "rule": "cli", "binary": "node", "semver": "18.14.2"}],
+    "Node": [{ "rule": "cli", "binary": "node", "semver": ">=18.14.2"}],
     "Git email": [{"rule": "shell", "command": "git config core.ignorecase", "match": "true"}]
   },
 }

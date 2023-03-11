@@ -14,6 +14,7 @@ rm -fr stacks/*/node_modules
 rm -fr reports
 rm -fr "*/**/package-lock.json"
 rm -fr "*/**/yarn.lock"
+rm -fr .husky
 
 # shellcheck disable=SC2028
 echo "\n\e[32mCLEAN & DEPENDENCIES COMPLETE\e[0m"
