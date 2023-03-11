@@ -1,1 +1,1 @@
-export {default} from 'stylis-plugin-rtl'
+export { default } from "stylis-plugin-rtl";
