@@ -17,13 +17,13 @@
     "audit": "bash ./scripts/security-audit.sh",
     "audit:env": "bash ./scripts/environment-audit.sh",
     "audit:commit": "bash ./scripts/branch-audit.sh",
+    "prepare:env": "bash ./scripts/husky.sh",
     "release": "yarn run standard-version",
     "release:major": "yarn release -- --release-as major",
     "release:minor": "yarn release -- --release-as minor",
     "release:patch": "yarn release -- --release-as patch",
     "release:alpha": "yarn release -- --prerelease alpha",
     "release:beta": "yarn run release -- --prerelease beta",
-    "prepare:husky": "bash ./scripts/husky.sh",
     "snapshot": "solidarity snapshot"
   },
   "devDependencies": {
