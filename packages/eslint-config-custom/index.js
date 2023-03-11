@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     'next',
     'turbo',
-    'prettier',
     'plugin:import/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
@@ -10,15 +9,9 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:storybook/recommended',
     'standard',
+    'prettier',
   ],
-  plugins: [
-    'react',
-    'jsx-a11y',
-    '@typescript-eslint',
-    'promise',
-    'import',
-    'testing-library',
-  ],
+  plugins: ['react', 'jsx-a11y', '@typescript-eslint', 'promise', 'import', 'testing-library'],
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
     'comma-dangle': 0,
@@ -30,18 +23,7 @@ module.exports = {
     'jsx-a11y/role-supports-aria-props': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 80,
-        tabWidth: 2,
-        singleQuote: true,
-        trailingComma: 'all',
-        arrowParens: 'always',
-        semi: false,
-        endOfLine: 'auto',
-      },
-    ],
+    'prettier/prettier': 'error',
     'jsx-a11y/alt-text': [
       'warn',
       {
