@@ -4,13 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-next": "13.0.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint": "^8.36.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-config-turbo": "latest",
-    "eslint-plugin-react": "7.31.8",
-    "@typescript-eslint/eslint-plugin": "^5.51.0",
-    "@typescript-eslint/parser": "^5.53.0",
+    "eslint-plugin-react": "7.32.2",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
     "add": "^2.0.6",
     "eslint-config-standard": "^17.0.0",
     "eslint-import-resolver-typescript": "^3.5.3",
@@ -20,12 +20,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-storybook": "^0.6.10",
-    "eslint-plugin-testing-library": "^5.10.1",
+    "eslint-plugin-storybook": "^0.6.11",
+    "eslint-plugin-testing-library": "^5.10.2",
     "prettier": "^2.8.4"
   },
   "devDependencies": {
-    "typescript": "^4.7.4"
+    "typescript": "^4.9.5"
   },
   "publishConfig": {
     "access": "public"
