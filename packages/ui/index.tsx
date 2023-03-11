@@ -1,1 +1,2 @@
-import * as React from 'react'
+export * from './src/layout'
+export * from './mantine'
