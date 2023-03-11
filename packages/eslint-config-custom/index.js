@@ -11,14 +11,7 @@ module.exports = {
     'plugin:storybook/recommended',
     'standard',
   ],
-  plugins: [
-    'react',
-    'jsx-a11y',
-    '@typescript-eslint',
-    'promise',
-    'import',
-    'testing-library',
-  ],
+  plugins: ['react', 'jsx-a11y', '@typescript-eslint', 'promise', 'import', 'testing-library'],
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
     'comma-dangle': 0,

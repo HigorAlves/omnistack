@@ -32,7 +32,7 @@
     "@commitlint/config-conventional": "^17.4.4",
     "eslint-config-custom": "*",
     "lint-staged": "^13.1.2",
-    "prettier": "latest",
+    "prettier": "^2.8.4",
     "pretty-quick": "^3.1.3",
     "solidarity": "^3.0.4",
     "standard-version": "^9.5.0",
