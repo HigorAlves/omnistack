@@ -1,1 +1,3 @@
-import * as React from 'react'
+export function test() {
+  console.log('Test')
+}
