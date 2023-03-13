@@ -18,14 +18,9 @@
     "audit:env": "bash ./scripts/environment-audit.sh",
     "audit:commit": "bash ./scripts/branch-audit.sh",
     "prepare:env": "bash ./scripts/husky.sh",
-    "release": "yarn run standard-version",
-    "release:major": "yarn release -- --release-as major",
-    "release:minor": "yarn release -- --release-as minor",
-    "release:patch": "yarn release -- --release-as patch",
-    "release:alpha": "yarn release -- --prerelease alpha",
-    "release:beta": "yarn run release -- --prerelease beta",
-    "snapshot": "solidarity snapshot",
-    "bump": "bash ./scripts/bump-version.sh"
+    "release:prepare": "yarn run standard-version",
+    "release": "bash ./scripts/release.sh",
+    "snapshot": "solidarity snapshot"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
