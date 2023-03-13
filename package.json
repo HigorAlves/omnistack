@@ -1,6 +1,6 @@
 {
   "name": "omnistack",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -43,5 +43,10 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "standard-version": {
+    "scripts": {
+      "postbump": "bash ./scripts/bump-version.sh"
+    }
+  }
 }
