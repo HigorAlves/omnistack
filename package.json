@@ -24,20 +24,21 @@
     "release:patch": "yarn release -- --release-as patch",
     "release:alpha": "yarn release -- --prerelease alpha",
     "release:beta": "yarn run release -- --prerelease beta",
-    "snapshot": "solidarity snapshot"
+    "snapshot": "solidarity snapshot",
+    "bump": "bash ./scripts/bump-version.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "eslint-config-custom": "*",
+    "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.4",
     "pretty-quick": "^3.1.3",
     "solidarity": "^3.0.4",
     "standard-version": "^9.5.0",
     "turbo": "latest",
-    "validate-branch-name": "^1.3.0",
-    "husky": "^8.0.3"
+    "validate-branch-name": "^1.3.0"
   },
   "engines": {
     "node": ">=18.0.0"
