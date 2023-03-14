@@ -1,8 +1,8 @@
-import { MantineProvider } from '@omni/ui/mantine'
-import { AppProps } from 'next/app'
-import Head from 'next/head'
+import { MantineProvider } from "@omni/ui/mantine";
+import { AppProps } from "next/app";
+import Head from "next/head";
 
-import { rtlCache } from '../../rtl-cache'
+import { rtlCache } from "~/../rtl-cache";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
@@ -15,7 +15,12 @@ export default function App(props: AppProps) {
       </Head>
 
       <MantineProvider
-        theme={{ dir: 'rtl', colorScheme: 'dark' }}
+        theme={{
+          dir: '"rtl"
+          colorScheme: '"light"
+          fontFamily: '"Inter, Verdana, sans-serif"
+          fontFamilyMonospace: '"Monaco, Courier, monospace"
+          primaryColor: '"orange"        }}
         withGlobalStyles
         withNormalizeCSS
         emotionCache={rtlCache}
