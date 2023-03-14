@@ -15,7 +15,7 @@ export default function App(props: AppProps) {
       </Head>
 
       <MantineProvider
-        theme={{ dir: 'rtl' }}
+        theme={{ dir: 'rtl', colorScheme: 'dark' }}
         withGlobalStyles
         withNormalizeCSS
         emotionCache={rtlCache}

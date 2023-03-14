@@ -1,3 +1,2 @@
-export function test() {
-  console.log('Test')
-}
+export * from './src/layout'
+export * from './mantine'

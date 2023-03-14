@@ -1,5 +1,9 @@
-import { Button } from '@omni/ui/mantine'
+import { Layout, Button, LayoutTypes } from '@omni/ui'
 
 export default function Web() {
-  return <Button>haha</Button>
+  return (
+    <Layout layout={LayoutTypes.BASE}>
+      <Button>haha</Button>
+    </Layout>
+  )
 }

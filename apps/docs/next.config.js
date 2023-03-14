@@ -3,7 +3,7 @@
  */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ['ui'],
+  transpilePackages: ['@omni/ui'],
 }
 
 const withNextra = require('nextra')({
