@@ -8,11 +8,7 @@ export interface DashboardLayoutProps {
   header: ReactElement
 }
 
-export function DashboardLayout({
-  main,
-  navbar,
-  header,
-}: DashboardLayoutProps) {
+export function DashboardLayout({ main, navbar, header }: DashboardLayoutProps) {
   return (
     <AppShell navbar={navbar} header={header}>
       {main}
