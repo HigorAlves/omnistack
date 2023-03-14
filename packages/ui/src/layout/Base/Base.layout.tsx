@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react'
 
-import { AppShell, Burger, Container, createStyles, Flex, Group, Header, rem } from '@mantine/core'
+import { Header, AppShell, Flex, rem, Burger, Container, Group, createStyles } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 import { Footer, HeroText } from '../../components'
