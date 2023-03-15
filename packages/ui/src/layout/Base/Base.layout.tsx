@@ -1,9 +1,9 @@
 import { ReactNode, useState } from 'react'
 
-import { Header, AppShell, Flex, rem, Burger, Container, Group, createStyles } from '@mantine/core'
+import { Header, AppShell, rem, Burger, Container, Group, createStyles, Title } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
-import { Footer, HeroText } from '../../components'
+import { Footer } from '../../components'
 
 interface BaseLayoutProps {
   main: ReactNode
@@ -55,10 +55,9 @@ const useStyles = createStyles((theme) => ({
 export function BaseLayout({ main }: BaseLayoutProps) {
   const links = [
     { link: '/', label: 'Home' },
-    { link: '/product', label: 'Product' },
-    { link: '/solutions', label: 'Solutions' },
-    { link: '/partners', label: 'Partners' },
-    { link: '/about', label: 'About' },
+    { link: '/docs', label: 'Docs' },
+    { link: '/tools', label: 'Tools' },
+    { link: '/techs', label: 'Techs' },
   ]
   const [opened, { toggle }] = useDisclosure(false)
   const [active, setActive] = useState(links[0].link)
@@ -84,7 +83,9 @@ export function BaseLayout({ main }: BaseLayoutProps) {
       header={
         <Header height={60} mb={120}>
           <Container className={classes.header}>
-            <h1>OMni</h1>
+            <Title size={'lg'} order={1}>
+              Omni Stack
+            </Title>
             <Group spacing={5} className={classes.links}>
               {items}
             </Group>
@@ -93,20 +94,9 @@ export function BaseLayout({ main }: BaseLayoutProps) {
           </Container>
         </Header>
       }
-      footer={
-        <Footer
-          data={[
-            { title: 'Platform', links },
-            { title: 'Resources', links },
-            { title: 'Company', links },
-          ]}
-        />
-      }
+      footer={<Footer links={links} />}
     >
-      <Flex gap="md" justify="center" align="center" direction="column" wrap="wrap">
-        <HeroText />
-        {main}
-      </Flex>
+      {main}
     </AppShell>
   )
 }

@@ -17,10 +17,10 @@ export default function App(props: AppProps) {
       <MantineProvider
         theme={{
           dir: 'rtl',
-          colorScheme: 'light',
+          colorScheme: 'dark',
           fontFamily: 'Inter, Verdana, sans-serif',
           fontFamilyMonospace: 'Monaco, Courier, monospace',
-          primaryColor: 'orange',
+          primaryColor: 'yellow',
         }}
         withGlobalStyles
         withNormalizeCSS

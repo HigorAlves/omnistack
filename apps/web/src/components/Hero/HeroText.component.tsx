@@ -1,4 +1,6 @@
-import { createStyles, Title, Text, Button, Container, rem, Group, Grid } from '@mantine/core'
+import { createStyles, Title, Text, Button, Container, rem, Group, Grid } from '@omni/ui'
+
+import { SomeLotties } from '~/components/lotties/someLotties'
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -64,33 +66,34 @@ const useStyles = createStyles((theme) => ({
   },
 }))
 
-export function HeroText() {
+export function HeroTextComponent() {
   const { classes } = useStyles()
 
   return (
-    <Container className={classes.wrapper}>
-      <Grid grow>
-        <Grid.Col md={8}>
-          <Title order={1} align={'right'}>
-            We are{' '}
-            <Text component="span" className={classes.highlight} inherit>
-              SnapStrat
+    <Container size={1400} mt={80}>
+      <Grid grow justify="center" align="center">
+        <Grid.Col md={5}>
+          <Title order={1} size={rem(48)} align={'left'}>
+            <Text component="span" color={'yellow'} inherit>
+              Omni Stack
             </Text>{' '}
-            a customized decision-making SaaS
+            a customized SaaS builder
           </Title>
 
-          <Text size="lg" color="dimmed" align={'right'} className={classes.description}>
-            We build customized decision-making SaaS applications quickly on our fit-for-purpose
-            platform, all based on our deep understanding of your business and your strategy.
+          <Text size="md" color="dimmed" align={'left'}>
+            Build fully functional accessible web applications faster than ever. Using Turbo Pack,
+            NextJS, React Native, Serverless & Mantine.
           </Text>
 
           <Group position="right" mt={'xl'}>
-            <Button className={classes.control} variant="default" color="gray">
-              Book a demo
+            <Button className={classes.control} variant="outline">
+              Getting start
             </Button>
           </Group>
         </Grid.Col>
-        <Grid.Col md={4}>as</Grid.Col>
+        <Grid.Col md={6}>
+          <SomeLotties />
+        </Grid.Col>
       </Grid>
     </Container>
   )
