@@ -9,8 +9,9 @@
     "stacks/*"
   ],
   "scripts": {
-    "build": "bash ./scripts/build.sh",
     "dev": "bash ./scripts/dev.sh",
+    "build": "bash ./scripts/build.sh",
+    "test": "bash ./scripts/test.sh",
     "clean": "bash ./scripts/clean.sh",
     "lint": "bash ./scripts/lint.sh",
     "lint:ci": "bash ./scripts/lint-ci.sh",

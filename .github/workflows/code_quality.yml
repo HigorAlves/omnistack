@@ -73,6 +73,21 @@ jobs:
       - name: Lint
         run: yarn lint:ci
 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          check-latest: true
+      - name: Install Npm Dependencies
+        run: yarn install
+      - name: Test
+        run: yarn test
+
   build:
     name: Build
     runs-on: ubuntu-latest
