@@ -1,9 +1,5 @@
-package.json
 yarn.lock
 .github/
 .next/
 node_modules/
-tsconfig.json
-.eslintrc.json
-cypress.json
 _meta.json
