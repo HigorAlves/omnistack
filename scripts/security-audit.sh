@@ -11,6 +11,7 @@ npx audit-ci
 EXIT_CODE=$?
 if [ $EXIT_CODE -ge 16 ]; then
     echo "Security issue found"
+    # shellcheck disable=SC2242
     exit EXIT_CODE
 fi
 
