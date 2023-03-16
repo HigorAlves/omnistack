@@ -6,7 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch --passWithNoTests",
+    "test:ci": "jest --ci -o --passWithNoTests",
+    "test:coverage": "jest -o --collectCoverage --no-cache --passWithNoTests",
+    "cy": "cypress open",
+    "cy:run": "cypress run -q",
+    "cy:ci": "start-server-and-test dev http://localhost:3000 cy:run",
+    "cy:e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
+    "cy:e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "cy:component": "cypress open --component",
+    "cy:component:headless": "cypress run --component",
+    "test:all": "npm-run-all test:ci cy:run"
   },
   "dependencies": {
     "@omni/ui": "*",
@@ -18,11 +29,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
+    "@cypress/code-coverage": "^3.10.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "cypress": "^12.8.1",
     "eslint": "8.36.0",
     "eslint-config-custom": "*",
+    "eslint-plugin-cypress": "^2.12.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "tsconfig": "*",
     "typescript": "^4.9.5"
   }

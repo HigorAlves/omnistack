@@ -10,9 +10,12 @@ module.exports = {
     'plugin:storybook/recommended',
     'standard',
     'prettier',
+    'plugin:cypress/recommended',
+    'plugin:jest/recommended',
   ],
   plugins: ['react', 'jsx-a11y', '@typescript-eslint', 'promise', 'import', 'testing-library'],
   rules: {
+    'jest/expect-expect': 'off',
     '@next/next/no-html-link-for-pages': 'off',
     'comma-dangle': 0,
     'space-before-function-paren': 0,
