@@ -11,7 +11,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   collectCoverage: true,
   coverageDirectory: '../../reports/jest/web',
-  coverageReporters: ['clover'],
+  coverageReporters: ['lcov'],
   testEnvironment: 'jest-environment-jsdom',
   modulePathIgnorePatterns: ['cypress'],
   testRegex: '(/__tests__/.*|(\\\\.|/)(test))\\\\.[jt]sx?$',
