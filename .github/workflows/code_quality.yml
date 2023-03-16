@@ -2,35 +2,36 @@ name: 'Code Quality'
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev, staging]
   pull_request:
-    branches: [main, dev]
+    branches: [main, dev, staging]
   schedule:
     - cron: '17 22 * * 4'
 
 jobs:
-  codeql:
-    name: CodeQL
-    runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ['javascript', 'typescript']
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: ${{ matrix.language }}
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+# THIS ONE IS JUST FOR PUBLIC REPOS AND ORGS
+#  codeql:
+#    name: CodeQL
+#    runs-on: ubuntu-latest
+#    permissions:
+#      actions: read
+#      contents: read
+#      security-events: write
+#    strategy:
+#      fail-fast: false
+#      matrix:
+#        language: ['javascript', 'typescript']
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v3
+#      - name: Initialize CodeQL
+#        uses: github/codeql-action/init@v2
+#        with:
+#          languages: ${{ matrix.language }}
+#      - name: Autobuild
+#        uses: github/codeql-action/autobuild@v2
+#      - name: Perform CodeQL Analysis
+#        uses: github/codeql-action/analyze@v2
 
   qodana:
     name: Qodana
@@ -41,3 +42,19 @@ jobs:
           fetch-depth: 0
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2022.3.2
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          check-latest: true
+      - name: Install Npm Dependencies
+        run: yarn install
+      - name: Lint
+        run: yarn lint:ci
+      - name: Audit
+        run: yarn audit
