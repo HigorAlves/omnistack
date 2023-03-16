@@ -33,6 +33,21 @@ jobs:
 #      - name: Perform CodeQL Analysis
 #        uses: github/codeql-action/analyze@v2
 
+  audit:
+    name: Security Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          check-latest: true
+      - name: Install Npm Dependencies
+        run: yarn install
+      - name: Audit
+        run: yarn audit
+
   qodana:
     name: Qodana
     runs-on: ubuntu-latest
@@ -42,6 +57,7 @@ jobs:
           fetch-depth: 0
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2022.3.2
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -56,5 +72,19 @@ jobs:
         run: yarn install
       - name: Lint
         run: yarn lint:ci
-      - name: Audit
-        run: yarn audit
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: lint, audit, qodana
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          check-latest: true
+      - name: Install Npm Dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
