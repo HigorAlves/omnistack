@@ -8,10 +8,10 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/typescript',
     'plugin:storybook/recommended',
-    'standard',
-    'prettier',
     'plugin:cypress/recommended',
     'plugin:jest/recommended',
+    'standard',
+    'prettier',
   ],
   plugins: ['react', 'jsx-a11y', '@typescript-eslint', 'promise', 'import', 'testing-library'],
   rules: {

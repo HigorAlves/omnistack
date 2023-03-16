@@ -11,7 +11,7 @@
     "test:ci": "jest --ci -o --passWithNoTests",
     "test:coverage": "jest -o --collectCoverage --no-cache --passWithNoTests",
     "cy": "cypress open",
-    "cy:run": "cypress run -q",
+    "cy:run": "cypress run -q --spec cypress/**/*",
     "cy:ci": "start-server-and-test dev http://localhost:3000 cy:run",
     "cy:e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
     "cy:e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",

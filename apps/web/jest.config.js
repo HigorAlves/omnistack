@@ -10,10 +10,11 @@ const createJestConfig = nextJest({
 /** @type {import('jest').Config} */
 const customJestConfig = {
   collectCoverage: true,
-  coverageDirectory: 'reports/jest',
-  coverageReporters: ['json'],
+  coverageDirectory: '../../reports/jest/web',
+  coverageReporters: ['clover'],
   testEnvironment: 'jest-environment-jsdom',
   modulePathIgnorePatterns: ['cypress'],
+  testRegex: '(/__tests__/.*|(\\\\.|/)(test))\\\\.[jt]sx?$',
   moduleNameMapper: {
     '~/*': '<rootDir>src/$1',
   },
