@@ -1246,14 +1246,14 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mantine/core@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-6.0.1.tgz#e9cb1edc895a803c1957071eac9fc2b5457330be"
-  integrity sha512-RJ0gnEOMQu9qGV9bZxb4FrHe3UT2GjVokzZ91C/Ht8DTu8Ar1uUch45+VsqI67JG2ceHykOMvsDWgAulCUKBNg==
+"@mantine/core@^6.0.2":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-6.0.2.tgz#205babfdbb306f4959a2ffdc928a74f7171da087"
+  integrity sha512-FP/qaMBzh2dDrZIFSAJB3vogWK3U8+nnwImKa+/ceo7EJLeauLNAssaoWn2TVnA6x5mIZnlPwkDtVqI8Q+K9Ww==
   dependencies:
     "@floating-ui/react" "^0.19.1"
-    "@mantine/styles" "6.0.1"
-    "@mantine/utils" "6.0.1"
+    "@mantine/styles" "6.0.2"
+    "@mantine/utils" "6.0.2"
     "@radix-ui/react-scroll-area" "1.0.2"
     react-remove-scroll "^2.5.5"
     react-textarea-autosize "8.3.4"
@@ -1287,10 +1287,18 @@
     clsx "1.1.1"
     csstype "3.0.9"
 
-"@mantine/utils@6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-6.0.1.tgz#cf0e42b617dbc3632a3ef29bdf0b5e29f123d6a5"
-  integrity sha512-uEN457ELHpKXS4qNAcL5OR9dFOjeFngWRZJVAPkLafWBJuLd2qmdLvKLgUVyt+cMVFtcjnu6rGVOite1+dtaFw==
+"@mantine/styles@6.0.2":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@mantine/styles/-/styles-6.0.2.tgz#893b9d1e43364f4c45e99e84428a615ed130a86c"
+  integrity sha512-py5yWzCPSYAv/4NwQ+dHaei0Rmk8kQ/ls5i3u28y6U+fCoutRhlCPJKjPfOWQzFpSRS0oGPdChFdg6zn4r8YIA==
+  dependencies:
+    clsx "1.1.1"
+    csstype "3.0.9"
+
+"@mantine/utils@6.0.2":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-6.0.2.tgz#06da9dfb390a026e005f7e2712a3a30373a2b4c3"
+  integrity sha512-fx+cmkb8PMpkr65nUs8YgaXFJbtNY+ybSXDfBxwFAWMTLAocbNo7vjkSvPWZVS1O2szPK/s4Rqdw0W76dyG4+w==
 
 "@manypkg/find-root@^1.1.0":
   version "1.1.0"
