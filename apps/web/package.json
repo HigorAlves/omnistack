@@ -28,7 +28,7 @@
     "react-lottie": "^1.2.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
+    "@babel/core": "^7.22.9",
     "@cypress/code-coverage": "^3.10.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
